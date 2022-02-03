@@ -15,7 +15,7 @@ const SearchResults: NextPage<SearchResultsProps> = ({ results }) => {
     searchData = <p>No post found with given search term</p>;
   } else {
     searchData = newResults.map((item) => (
-      <Link href={`/post/${item.slug}`} key={item.slug}>
+      <Link href={`/posts/${item.slug}`} key={item.slug}>
         <a>
           <li className="list-group-item">{item.title}</li>
         </a>
