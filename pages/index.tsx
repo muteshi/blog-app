@@ -49,7 +49,6 @@ export async function getStaticProps(context: any) {
       latestPosts: latestPosts.results,
       photo,
     },
-    revalidate: 60,
   };
 }
 
