@@ -19,7 +19,7 @@ const Header: NextPage<HeaderProps> = ({ post }) => {
       <meta property="og:description" content={post.description} />
       <meta property="og:image" content={BASE_URL + post.image} />
 
-      <title>{`Muteshi Paul: ${post.title}`}</title>
+      <title>{`Muteshi Paul:: ${post.title}`}</title>
     </Head>
   );
 };

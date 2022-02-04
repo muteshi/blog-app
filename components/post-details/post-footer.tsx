@@ -10,10 +10,6 @@ interface PostFooterProps {
 }
 
 const PostFooter: React.FC<PostFooterProps> = ({ post, posts }) => {
-  //  if(typeof post.tags === 'object'){
-  //    let ta
-  //  }
-
   return (
     <>
       <section className="wow animate__fadeIn pt-0">
@@ -21,8 +17,7 @@ const PostFooter: React.FC<PostFooterProps> = ({ post, posts }) => {
           <div className="row">
             <div className="col-12 col-lg-10 d-flex flex-wrap mx-auto">
               <Tags tags={post} />
-              <PostSocial />
-              {/* <PostFooter posts={posts} post={post} /> */}
+              {/* <PostSocial /> */}
             </div>
           </div>
           <Author />

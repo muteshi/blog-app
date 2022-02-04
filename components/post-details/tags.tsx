@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { PostInterface } from "../../models/posts.model";
+import { getName, PostInterface } from "../../models/posts.model";
 import Loader from "../ui/Loader";
 
 interface Tagsprops {
@@ -10,8 +10,8 @@ const Tags: React.FC<Tagsprops> = ({ tags }) => {
   let tagSection: any = <Loader />;
   if (Object.keys(tags.tags).length != 0) {
     tagSection = tags.tags.map((tag) => (
-      <Link href="#" key={tag.id}>
-        <a>{tag.name}</a>
+      <Link href="#" key={getName(tag)}>
+        <a>{getName(tag)}</a>
       </Link>
     ));
   }

@@ -32,7 +32,7 @@ const HeaderSearch: React.FC = () => {
         className="header-search-form"
         onClick={() => showModalHandler()}
       >
-        <i className="fas fa-search search-button"></i>
+        <i className="fas fa-search search-button d-lg-none"></i>
       </a>
 
       <form

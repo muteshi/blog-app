@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { PostInterface } from "../../models/posts.model";
-import { truncateString } from "../../utils";
 import { BASE_URL } from "../../config.json";
 
 interface MainPhotoProps {
