@@ -18,6 +18,7 @@ const PageTitle: React.FC<PageTitleProps> = ({ photo }) => {
         url(${photoUrl})`,
       }}
     >
+      {/* <div className="opacity-medium bg-extra-dark-gray"></div> */}
       <div className="container position-relative">
         <div className="row align-items-center">
           <div className="col-12 d-flex flex-column justify-content-center text-center extra-small-screen page-title-large">

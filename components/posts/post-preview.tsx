@@ -19,6 +19,7 @@ const PostPreview: React.FC<PostPreviewProps> = ({ post, handleClick }) => {
           <a>
             <Image
               src={post.image.replace("http://", "https://")}
+              layout="responsive"
               alt={post.title}
               width={335}
               height={230}
