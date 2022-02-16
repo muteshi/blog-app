@@ -2,13 +2,13 @@ import Image from "next/image";
 
 const Logo: React.FC = () => {
   return (
-    <div className="col-auto ps-0">
+    <div className="col-auto ps-0 mb-2 mt-2 ">
       <Image
         src="/images/logo.png"
         className="logo-dark default"
-        alt="Muteshi"
+        alt="Muteshi Paul"
         width={175}
-        height={69}
+        height={33}
       />
     </div>
   );

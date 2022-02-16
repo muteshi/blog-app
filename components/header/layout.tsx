@@ -7,7 +7,7 @@ const Layout: React.FC = (props) => {
   return (
     <Fragment>
       <Head>
-        <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <MainNavigation />

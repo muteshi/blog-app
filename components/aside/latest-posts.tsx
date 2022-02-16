@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { PostInterface } from "../../models/posts.model";
-import { formatDate } from "../../utils";
+import { getDuration } from "../../utils";
 import Loader from "../ui/Loader";
 
 interface LatestPostsProps {
@@ -34,7 +34,7 @@ const LatestPosts: React.FC<LatestPostsProps> = ({ posts }) => {
               </a>
             </Link>
             <span className="d-block text-medium-gray text-small">
-              {formatDate(post.date_posted)}
+              {getDuration(post.date_posted)}
             </span>
           </div>
         </li>

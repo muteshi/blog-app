@@ -30,7 +30,7 @@ const PostHeader: React.FC<PostHeaderProps> = ({ post, handleClick }) => {
                   </a>
                 </li>
                 <li>
-                  <span className="text-dark-gray">by Muteshi Paul</span>
+                  <span className="text-dark-gray">by muteshi.com</span>
                 </li>
                 <li className="text-dark-gray">
                   <Link href="#">

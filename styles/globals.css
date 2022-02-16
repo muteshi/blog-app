@@ -45,7 +45,7 @@ Table of contents
 
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:100,200,300,400,500,600,700,800,900");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap");
 
 /* ===================================
     02. Reset
@@ -59,7 +59,7 @@ html {
   color: #232323;
 } */
 body {
-  font-family: "Opens Sans", sans-serif;
+  font-family: "Rubik", sans-serif;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
   font-size: 14px;
@@ -321,6 +321,7 @@ h2 {
 h3 {
   font-size: 48px;
   line-height: 54px;
+  color: #555;
 }
 h4 {
   font-size: 40px;
@@ -3889,4 +3890,8 @@ a.disabled {
 }
 .right-0 {
   right: 0;
+}
+.footer {
+  margin-bottom: 5px;
+  color: #fff !important;
 }

@@ -1,7 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import { getName, PostInterface } from "../../models/posts.model";
-import { formatDate, truncateString } from "../../utils";
+import {
+  formatDate,
+  getDateDetails,
+  getDuration,
+  truncateString,
+} from "../../utils";
 
 interface PostPreviewProps {
   post: PostInterface;
@@ -43,7 +48,7 @@ const PostPreview: React.FC<PostPreviewProps> = ({ post, handleClick }) => {
               </Link>
             </span>
             &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-            <span>{formatDate(post.date_posted)}</span>
+            <span>{getDateDetails(post.date_posted)}</span>
             &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
             <Link href="#">
               <a

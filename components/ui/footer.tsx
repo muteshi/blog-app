@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
       <div className="container">
         <div className="row align-items-center">
           {/* <!-- start copyright --> */}
-          <div className="col-md-6 text-center text-small alt-font sm-margin-5px-bottom">
+          <div className="col-md-6 text-center text-small alt-font sm-margin-5px-bottom footer">
             &copy; {new Date().getFullYear()} Copyright Muteshi Paul All rights
             reserved
           </div>
