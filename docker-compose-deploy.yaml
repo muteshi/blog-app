@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  blog_app:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    volumes:
+      - .:/app
+    environment:
+      - REACT_APP_NAME=Blog Application
+  nginx:
+    build: ./nginx
+    ports:
+      - 80:80
