@@ -2,7 +2,9 @@
 .gitignore
 .next/                # Existing Next.js builds
 .dockerignore
-Dockerfile
-docker-compose.yml
+Dockerfile.prod
+Dockerfile.dev
+docker-compose.yaml
+docker-compose-deploy.yaml
 node_modules/         # Installed inside container
 nginx/         
