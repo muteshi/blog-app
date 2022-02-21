@@ -14,12 +14,12 @@ const Header: NextPage<HeaderProps> = ({ post }) => {
       <meta property="og:title" content={post.title} />
       <meta
         property="og:url"
-        content={`https://www.muteshi.com/posts/${post.slug}`}
+        content={`https://blog.muteshi.com/posts/${post.slug}`}
       />
       <meta property="og:description" content={post.description} />
       <meta property="og:image" content={BASE_URL + post.image} />
 
-      <title>{`Muteshi Paul:: ${post.title}`}</title>
+      <title>{`Muteshi Paul :: ${post.title}`}</title>
     </Head>
   );
 };

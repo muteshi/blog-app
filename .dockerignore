@@ -1,6 +1,6 @@
 .git/
 .gitignore
-.next/                # Existing Next.js builds
+# .next/                # Existing Next.js builds
 .dockerignore
 Dockerfile.prod
 Dockerfile.dev

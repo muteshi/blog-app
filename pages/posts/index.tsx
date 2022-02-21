@@ -32,8 +32,11 @@ const AllPosts: NextPage<AllPostsProps> = ({
   return (
     <>
       <Head>
-        <meta property="og:title" content="Tech expert & Full-stack web dev" />
-        <meta property="og:url" content="https://www.muteshi.com" />
+        <meta
+          property="og:title"
+          content="Technology and Space musings from Muteshi Paul"
+        />
+        <meta property="og:url" content="https://blog.muteshi.com" />
         <meta
           property="og:description"
           content="Technology expert and Full-stack web
@@ -41,9 +44,9 @@ const AllPosts: NextPage<AllPostsProps> = ({
         />
         <meta
           property="og:image"
-          content="https://app.muteshi.com/static/media/uploads/post/eaeba0b3-7fde-4488-8637-724732bdfbaf.jpg"
+          content="https://app.muteshi.com/static/media/uploads/post/b4597011-386f-4455-89d7-949a2642a641.png"
         />
-        <title>Muteshi Paul - Latest blog posts</title>
+        <title>Muteshi Paul - Technology & Space latest posts</title>
       </Head>
       <PageTitle photo={photo} />
       <PostsGrid posts={posts} latestPosts={latestPosts} cats={cats} />

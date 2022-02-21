@@ -1,15 +1,21 @@
-# Base on offical NGINX Alpine image
-FROM nginx:alpine
 
-# Remove any existing config files
-RUN rm /etc/nginx/conf.d/*
+FROM nginxinc/nginx-unprivileged:1-alpine
 
-# Copy config files
-# *.conf files in conf.d/ dir get included in main config
-COPY ./default.conf /etc/nginx/conf.d/
+LABEL maintainer="muteshi.com"
 
-# Expose the listening port
-EXPOSE 80
+COPY ./default.conf.tpl /etc/nginx/default.conf.tpl
+COPY ./run.sh /run.sh
 
-# Launch NGINX
-CMD [ "nginx", "-g", "daemon off;" ]
+ENV LISTEN_PORT_HTTP=80
+ENV LISTEN_PORT_HTTPS=443
+
+USER root
+
+RUN touch /etc/nginx/conf.d/default.conf && \
+    chown nginx:nginx /etc/nginx/conf.d/default.conf && \
+    chmod +x /run.sh
+
+
+# USER nginx
+
+CMD ["/run.sh"]

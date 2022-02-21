@@ -35,7 +35,7 @@ export async function getStaticProps(context: any) {
   const { data: postData } = await getPost(slug);
   const { data: posts }: DataInterface = await getBlogPosts(1);
 
-  // if (!postData) return { notFound: true };
+  if (!postData) return { notFound: true };
 
   return {
     props: {
@@ -50,7 +50,7 @@ export async function getStaticPaths() {
   const slugs = posts.results.map((p) => ({ params: { slug: p.slug } }));
   return {
     paths: slugs,
-    fallback: true,
+    fallback: false,
   };
 }
 
