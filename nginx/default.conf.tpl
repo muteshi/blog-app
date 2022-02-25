@@ -61,5 +61,9 @@ server {
         proxy_pass http://blog_app_upstream;
     }
 
+    location /sitemap.xml {
+        alias /etc/nginx/sitemap.xml;
+    }
+
    
 }

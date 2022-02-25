@@ -1,6 +1,6 @@
 import { PostInterface, TagInterface } from "../../models/posts.model";
 import Author from "./author";
-import PostSocial from "./post-social";
+import CommentsCount from "./comments-count";
 import RelatedPosts from "./related-posts";
 import Tags from "./tags";
 
@@ -17,7 +17,11 @@ const PostFooter: React.FC<PostFooterProps> = ({ post, posts }) => {
           <div className="row">
             <div className="col-12 col-lg-10 d-flex flex-wrap mx-auto">
               <Tags tags={post} />
-              {/* <PostSocial /> */}
+              <CommentsCount
+                slug={post.slug}
+                title={post.title}
+                url={`https://blog.muteshi.com/${post.slug}`}
+              />
             </div>
           </div>
           <Author />

@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
+import ReactMarkdown from "react-markdown";
 import { PostInterface } from "../../models/posts.model";
-import { formatDate, truncateString } from "../../utils";
+import { truncateString } from "../../utils";
 import Loader from "../ui/Loader";
 interface RelatedPostsProps {
   posts: PostInterface[];
@@ -32,7 +33,9 @@ const RelatedPosts: React.FC<RelatedPostsProps> = ({ posts }) => {
                 <h6 className="card-title">{truncateString(item.title, 5)}</h6>
               </a>
             </Link>
-            <p className="card-text">{truncateString(item.content, 20)}</p>
+            <p className="card-text">
+              <ReactMarkdown>{truncateString(item.content, 20)}</ReactMarkdown>
+            </p>
           </div>
         </div>
       </div>

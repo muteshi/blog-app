@@ -1,12 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
+import ReactMarkdown from "react-markdown";
 import { getName, PostInterface } from "../../models/posts.model";
-import {
-  formatDate,
-  getDateDetails,
-  getDuration,
-  truncateString,
-} from "../../utils";
+import { getDateDetails, truncateString } from "../../utils";
 
 interface PostPreviewProps {
   post: PostInterface;
@@ -60,7 +56,9 @@ const PostPreview: React.FC<PostPreviewProps> = ({ post, handleClick }) => {
             </Link>
           </div>
           <p className="m-0 w-95 lg-w-100">
-            {truncateString(post.content, 35) + "..."}
+            <ReactMarkdown>
+              {truncateString(post.content, 35) + "..."}
+            </ReactMarkdown>
           </p>
         </div>
         <Link href={fullPostPath}>

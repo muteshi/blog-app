@@ -32,19 +32,15 @@ const AllPosts: NextPage<AllPostsProps> = ({
   return (
     <>
       <Head>
-        <meta
-          property="og:title"
-          content="Technology and Space musings from Muteshi Paul"
-        />
+        <meta property="og:title" content="Technology & Space" />
         <meta property="og:url" content="https://blog.muteshi.com" />
         <meta
           property="og:description"
-          content="Technology expert and Full-stack web
-    developer"
+          content="Technology and Space musings from Muteshi Paul"
         />
         <meta
           property="og:image"
-          content="https://app.muteshi.com/static/media/uploads/post/b4597011-386f-4455-89d7-949a2642a641.png"
+          content="https://app.muteshi.com/static/media/uploads/post/c629a68a-f857-4646-a722-764851424706.png"
         />
         <title>Muteshi Paul - Technology & Space latest posts</title>
       </Head>

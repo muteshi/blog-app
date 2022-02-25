@@ -1,6 +1,13 @@
 import { NextPage } from "next";
+import { ArticleComments } from "../../services/Disqus";
 
-const Comments: NextPage = () => {
+interface CommentsProps {
+  slug: string;
+  title: string;
+  url: string;
+}
+
+const Comments: NextPage<CommentsProps> = ({ slug, title, url }) => {
   return (
     <section className="wow animate__fadeIn bg-light-gray" id="comments">
       <div className="container">
@@ -15,6 +22,7 @@ const Comments: NextPage = () => {
         </div>
         <div className="row">
           <div className="col-12 col-lg-10 d-flex flex-wrap mx-auto text-center"></div>
+          <ArticleComments slug={slug} title={title} url={url} />
         </div>
       </div>
     </section>

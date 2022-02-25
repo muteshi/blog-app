@@ -1,11 +1,10 @@
-import { log } from "console";
 import { useEffect, useState } from "react";
 import {
   DataInterface,
   getName,
   PostInterface,
-  TagInterface,
 } from "../../models/posts.model";
+import { ArticleComments } from "../../services/Disqus";
 import {
   getRelatedPosts,
   getPostsFromCategory,
@@ -54,7 +53,11 @@ const Post: React.FC<PostProps> = ({ post }) => {
       <MainPhoto post={post} />
       <PostContent post={post} />
       <PostFooter post={post} posts={relatedPosts} />
-      <Comments />
+      <Comments
+        slug={post.slug}
+        title={post.title}
+        url={`https://blog.muteshi.com/${post.slug}`}
+      />
     </>
   );
 };

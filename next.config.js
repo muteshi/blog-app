@@ -2,7 +2,7 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ["app.muteshi.com"],
+    domains: ["app.muteshi.com", "img.icons8.com"],
   },
   webpackDevMiddleware: (config) => {
     config.watchOptions = {

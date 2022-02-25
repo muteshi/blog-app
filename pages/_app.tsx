@@ -9,8 +9,20 @@ import "../styles/responsive.css";
 
 import Layout from "../components/header/layout";
 import { SearchContextProvider } from "../context/search-context";
+import { pageview } from "../lib/gtag";
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps, router }: AppProps) {
+  useEffect(() => {
+    const handleRouteChange = (url: string) => {
+      pageview(url, document.title);
+    };
+
+    router.events.on("routeChangeComplete", handleRouteChange);
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, []);
+
   useEffect(() => {
     require("bootstrap/dist/js/bootstrap.min.js");
   }, []);
