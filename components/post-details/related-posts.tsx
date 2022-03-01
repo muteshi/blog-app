@@ -33,9 +33,10 @@ const RelatedPosts: React.FC<RelatedPostsProps> = ({ posts }) => {
                 <h6 className="card-title">{truncateString(item.title, 5)}</h6>
               </a>
             </Link>
-            <p className="card-text">
-              <ReactMarkdown>{truncateString(item.content, 20)}</ReactMarkdown>
-            </p>
+
+            <ReactMarkdown className="card-text">
+              {truncateString(item.content, 20)}
+            </ReactMarkdown>
           </div>
         </div>
       </div>

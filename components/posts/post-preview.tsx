@@ -55,11 +55,10 @@ const PostPreview: React.FC<PostPreviewProps> = ({ post, handleClick }) => {
               </a>
             </Link>
           </div>
-          <p className="m-0 w-95 lg-w-100">
-            <ReactMarkdown>
-              {truncateString(post.content, 35) + "..."}
-            </ReactMarkdown>
-          </p>
+
+          <ReactMarkdown className="m-0 w-95 lg-w-100">
+            {truncateString(post.content, 35) + "..."}
+          </ReactMarkdown>
         </div>
         <Link href={fullPostPath}>
           <a className="btn btn-very-small btn-dark-gray text-uppercase">

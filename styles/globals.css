@@ -3895,3 +3895,10 @@ a.disabled {
   margin-bottom: 5px;
   color: #fff !important;
 }
+
+.content-image {
+  margin-left: auto;
+  margin-right: 0;
+  width: 100%;
+  max-width: 600px;
+}
