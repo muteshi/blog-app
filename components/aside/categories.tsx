@@ -11,7 +11,7 @@ const Categories: React.FC<CategoriesProps> = ({ cats, handleClick }) => {
 
   if (Object.values(cats).length != 0) {
     categoryItem = cats.map((item) =>
-      item.featured ? (
+      item.featured && item.post_count ? (
         <li key={item.id}>
           <Link href="#">
             <a onClick={() => handleClick(item.name)}>{item.name}</a>

@@ -32,12 +32,17 @@ const AllPosts: NextPage<AllPostsProps> = ({
   return (
     <>
       <Head>
-        <meta property="og:title" content="Technology & Space" />
-        <meta property="og:url" content="https://blog.muteshi.com" />
+        <meta
+          name="description"
+          key="title"
+          content="On this blog, I write anything technology and about Space which I am always fascinated with!"
+        />
         <meta
           property="og:description"
           content="Technology and Space musings from Muteshi Paul"
         />
+        <meta property="og:title" content="Technology & Space" />
+        <meta property="og:url" content="https://blog.muteshi.com" />
         <meta
           property="og:image"
           content="https://app.muteshi.com/static/media/uploads/post/c629a68a-f857-4646-a722-764851424706.png"

@@ -27,9 +27,15 @@ const HomePage: NextPage<HomePageProps> = ({
   latestPosts,
   cats,
 }) => {
+  const modifiedPosts = posts.sort(function (a, b) {
+    return (
+      new Date(a.date_posted).getTime() - new Date(b.date_posted).getTime()
+    );
+  });
+
   return (
     <AllPosts
-      posts={posts}
+      posts={modifiedPosts}
       latestPosts={latestPosts}
       cats={cats}
       photo={photo}

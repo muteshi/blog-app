@@ -20,6 +20,7 @@ server {
 
 
 
+
 server {
     listen 443 ssl;
     server_name blog.muteshi.com;

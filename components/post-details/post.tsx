@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
+
 import {
   DataInterface,
   getName,
   PostInterface,
 } from "../../models/posts.model";
-import { ArticleComments } from "../../services/Disqus";
 import {
   getRelatedPosts,
   getPostsFromCategory,

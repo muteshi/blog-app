@@ -12,7 +12,7 @@ const RelatedPosts: React.FC<RelatedPostsProps> = ({ posts }) => {
   let relatedPosts: any = <Loader />;
 
   if (Object.keys(posts).length != 0) {
-    relatedPosts = posts.map((item) => (
+    relatedPosts = posts.slice(0, 3).map((item) => (
       <div className="col" key={item.slug}>
         <div className="card text-center h-100">
           <Link href={`/posts/${item.slug}`}>
