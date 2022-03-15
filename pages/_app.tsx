@@ -21,7 +21,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
     return () => {
       router.events.off("routeChangeComplete", handleRouteChange);
     };
-  }, []);
+  }, [router.events]);
 
   useEffect(() => {
     require("bootstrap/dist/js/bootstrap.min.js");

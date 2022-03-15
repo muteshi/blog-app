@@ -36,7 +36,7 @@ const Post: React.FC<PostProps> = ({ post }) => {
       setRelatedPosts(posts.results);
     };
     getPostData();
-  }, []);
+  }, [post.tags]);
 
   const handleCategoryClick = async (cat: string) => {
     const { data: posts } = await getPostsFromCategory(cat);

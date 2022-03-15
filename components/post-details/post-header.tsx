@@ -1,6 +1,6 @@
 import Link from "next/link";
 import useSWR from "swr";
-import { getName, PostInterface } from "../../models/posts.model";
+import { PostInterface } from "../../models/posts.model";
 import { formatDate } from "../../utils";
 import Header from "../header/header";
 
@@ -30,11 +30,13 @@ const PostHeader: React.FC<PostHeaderProps> = ({ post, handleClick }) => {
               {/* start page title */}
               <h1 className="alt-font text-extra-dark-gray font-weight-600 mb-0 text-uppercase">
                 <Link href="/">
-                  <i
-                    className="fa fa-arrow-left ml-5"
-                    aria-hidden="true"
-                    style={{ cursor: "pointer" }}
-                  ></i>
+                  <a>
+                    <i
+                      className="fa fa-arrow-left ml-5"
+                      aria-hidden="true"
+                      style={{ cursor: "pointer" }}
+                    ></i>
+                  </a>
                 </Link>
                 <span style={{ paddingLeft: "10px" }}></span>
                 {post.title}

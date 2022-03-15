@@ -32,7 +32,6 @@ const PostContent: React.FC<PostContentProps> = ({ post }) => {
 
       return !inline && match ? (
         <SyntaxHighlighter
-          children={String(children).replace(/\n$/, "")}
           style={atomDark}
           language={match[1]}
           customStyle={{
@@ -41,7 +40,9 @@ const PostContent: React.FC<PostContentProps> = ({ post }) => {
           }}
           PreTag="div"
           {...props}
-        />
+        >
+          {String(children).replace(/\n$/, "")}
+        </SyntaxHighlighter>
       ) : (
         <code className={className} {...props}>
           {children}
